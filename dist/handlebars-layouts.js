@@ -114,7 +114,7 @@ function layouts(handlebars) {
 			var fn = options.fn || noop,
 				context = mixin({}, this, customContext, options.hash),
 				data = handlebars.createFrame(options.data),
-				template = handlebars.partials[name];
+				template = options.data.exphbs.partials[name];
 
 			// Partial template required
 			if (template == null) {

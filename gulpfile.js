@@ -39,7 +39,7 @@ gulp.task('test', ['lint', 'cover'], function () {
 		.pipe(istanbul.writeReports());
 });
 
-gulp.task('build', ['test'], function () {
+gulp.task('build', function () {
 	var browserify = require('browserify'),
 		source = require('vinyl-source-stream'),
 		options = { standalone: 'handlebars-layouts' };
